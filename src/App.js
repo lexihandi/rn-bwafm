@@ -1,12 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {SplashScreen} from './pages';
 
 const App = () => {
-  return (
-    <View>
-      <Text>coba</Text>
-    </View>
-  );
+  return <SplashScreen />;
 };
 
 export default App;
