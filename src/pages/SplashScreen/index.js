@@ -1,12 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 import {ImageLogo} from '../../assets';
+import {Gap} from '../../components';
 
 const SplashScreen = () => {
   return (
     <View style={styles.page}>
       <Image source={ImageLogo} style={styles.img} />
-      <View style={styles.gap} />
+      <Gap height={30} />
       <Text style={styles.text}>FoodMarket</Text>
     </View>
   );
