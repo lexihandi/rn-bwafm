@@ -1,13 +1,13 @@
-import React from 'react';
-import 'react-native-gesture-handler';
-import {StyleSheet} from 'react-native';
-import {SplashScreen, SignIn} from './pages';
 import {NavigationContainer} from '@react-navigation/native';
+import React from 'react';
+import {StyleSheet} from 'react-native';
+import 'react-native-gesture-handler';
+import Router from './router';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <SignIn />
+      <Router />
     </NavigationContainer>
   );
 };
