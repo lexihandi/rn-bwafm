@@ -46,18 +46,21 @@ const NewTaste = () => {
         title="Soup Bumil"
         price="IDR 289.000"
         onPress={() => navigation.navigate('FoodDetail')}
+        rating={3}
       />
       <ItemListFood
         image={DummyFoodTasteTwo}
         title="Soup Bumil"
         price="IDR 289.000"
         onPress={() => navigation.navigate('FoodDetail')}
+        rating={3}
       />
       <ItemListFood
         image={DummyFoodTasteThree}
         title="Soup Bumil"
         price="IDR 289.000"
         onPress={() => navigation.navigate('FoodDetail')}
+        rating={3}
       />
     </View>
   );
@@ -144,5 +147,5 @@ const HomeTabSection = () => {
 export default HomeTabSection;
 
 const styles = StyleSheet.create({
-  page: {paddingTop: 8},
+  page: {paddingTop: 8, paddingHorizontal: 24},
 });
