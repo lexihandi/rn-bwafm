@@ -20,7 +20,7 @@ const Rating = () => {
 export default Rating;
 
 const styles = StyleSheet.create({
-  rateContainer: {flexDirection: 'row', marginTop: 6},
+  rateContainer: {flexDirection: 'row', marginTop: 4},
   rate: {flexDirection: 'row'},
   rateText: {
     fontSize: 12,

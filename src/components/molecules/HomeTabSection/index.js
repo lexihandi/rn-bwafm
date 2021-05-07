@@ -1,12 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, useWindowDimensions, View} from 'react-native';
 import {SceneMap, TabBar, TabView} from 'react-native-tab-view';
-import {ItemListFood} from '..';
 import {
   DummyFoodTasteOne,
   DummyFoodTasteThree,
   DummyFoodTasteTwo,
 } from '../../../assets';
+import ItemListFood from '../ItemListFood';
+import {useNavigation} from '@react-navigation/native';
 
 const renderTabBar = props => (
   <TabBar
@@ -37,30 +38,78 @@ const renderTabBar = props => (
 );
 
 const NewTaste = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.page}>
-      <ItemListFood image={DummyFoodTasteOne} />
-      <ItemListFood image={DummyFoodTasteTwo} />
-      <ItemListFood image={DummyFoodTasteThree} />
+      <ItemListFood
+        image={DummyFoodTasteOne}
+        title="Soup Bumil"
+        price="IDR 289.000"
+        onPress={() => navigation.navigate('FoodDetail')}
+      />
+      <ItemListFood
+        image={DummyFoodTasteTwo}
+        title="Soup Bumil"
+        price="IDR 289.000"
+        onPress={() => navigation.navigate('FoodDetail')}
+      />
+      <ItemListFood
+        image={DummyFoodTasteThree}
+        title="Soup Bumil"
+        price="IDR 289.000"
+        onPress={() => navigation.navigate('FoodDetail')}
+      />
     </View>
   );
 };
 
 const Popular = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.page}>
-      <ItemListFood image={DummyFoodTasteOne} />
-      <ItemListFood image={DummyFoodTasteTwo} />
-      <ItemListFood image={DummyFoodTasteThree} />
+      <ItemListFood
+        image={DummyFoodTasteOne}
+        title="Soup Bumil"
+        price="IDR 289.000"
+        onPress={() => navigation.navigate('FoodDetail')}
+      />
+      <ItemListFood
+        image={DummyFoodTasteTwo}
+        title="Soup Bumil"
+        price="IDR 289.000"
+        onPress={() => navigation.navigate('FoodDetail')}
+      />
+      <ItemListFood
+        image={DummyFoodTasteThree}
+        title="Soup Bumil"
+        price="IDR 289.000"
+        onPress={() => navigation.navigate('FoodDetail')}
+      />
     </View>
   );
 };
 const Recommended = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.page}>
-      <ItemListFood image={DummyFoodTasteOne} />
-      <ItemListFood image={DummyFoodTasteTwo} />
-      <ItemListFood image={DummyFoodTasteThree} />
+      <ItemListFood
+        image={DummyFoodTasteOne}
+        title="Soup Bumil"
+        price="IDR 289.000"
+        onPress={() => navigation.navigate('FoodDetail')}
+      />
+      <ItemListFood
+        image={DummyFoodTasteTwo}
+        title="Soup Bumil"
+        price="IDR 289.000"
+        onPress={() => navigation.navigate('FoodDetail')}
+      />
+      <ItemListFood
+        image={DummyFoodTasteThree}
+        title="Soup Bumil"
+        price="IDR 289.000"
+        onPress={() => navigation.navigate('FoodDetail')}
+      />
     </View>
   );
 };
