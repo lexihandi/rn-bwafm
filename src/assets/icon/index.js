@@ -5,6 +5,8 @@ import IconOrderActive from './ic_transaction_on.svg';
 import IconOrderInactive from './ic_transaction_off.svg';
 import IconProfileActive from './ic_profile_on.svg';
 import IconProfileInactive from './ic_profile_off.svg';
+import IconStarActive from './ic_star_on.svg';
+import IconStarInactive from './ic_star_off.svg';
 
 export {
   IconBack,
@@ -14,4 +16,6 @@ export {
   IconOrderInactive,
   IconProfileActive,
   IconProfileInactive,
+  IconStarActive,
+  IconStarInactive,
 };

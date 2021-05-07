@@ -1,10 +1,10 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import {Button, Gap, Header, Select, TextInput} from '../../components';
 
 const SignUpAddress = ({navigation}) => {
   return (
-    <View style={styles.page}>
+    <ScrollView style={styles.page}>
       <Header
         title="Address"
         subTitle="Make sure it’s valid"
@@ -25,7 +25,7 @@ const SignUpAddress = ({navigation}) => {
           onPress={() => navigation.replace('SuccessSignUp')}
         />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -39,5 +39,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingTop: 40,
     marginTop: 10,
+    paddingBottom: 30,
   },
 });

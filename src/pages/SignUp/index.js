@@ -1,10 +1,10 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, ScrollView} from 'react-native';
 import {Button, Gap, Header, TextInput} from '../../components';
 
 const SignUp = ({navigation}) => {
   return (
-    <View style={styles.page}>
+    <ScrollView style={styles.page}>
       <Header
         title="Sign Up"
         subTitle="Register and eat"
@@ -33,7 +33,7 @@ const SignUp = ({navigation}) => {
           onPress={() => navigation.navigate('SignUpAddress')}
         />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingTop: 40,
     marginTop: 10,
+    paddingBottom: 30,
   },
   photo: {
     alignItems: 'center',
