@@ -3,7 +3,7 @@ import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {DummyFoodOne} from '../../assets';
 import {Button, Gap, Header, ItemListFood, ItemValue} from '../../components';
 
-const OrderSummary = () => {
+const OrderSummary = ({navigation}) => {
   return (
     <ScrollView>
       <View style={styles.page}>
@@ -15,16 +15,21 @@ const OrderSummary = () => {
         <View style={styles.content}>
           <Text style={styles.title}>Item Ordered</Text>
           <ItemListFood
+            type="order-summary"
             image={DummyFoodOne}
             title="Cherry Healthy"
-            price="IDR 289.000"
+            price="289.000"
             items={14}
           />
           <Text style={styles.titleDetail}>Details Transaction</Text>
           <ItemValue label="Cherry Healthy" value="IDR 18.390.000" />
           <ItemValue label="Driver" value="IDR 50.000" />
           <ItemValue label="Tax 10%" value="IDR 1.800.390" />
-          <ItemValue label="Total Price" value="IDR 390.803.000" />
+          <ItemValue
+            label="Total Price"
+            value="IDR 390.803.000"
+            valueColor="#1abc9c"
+          />
         </View>
         <View style={styles.content}>
           <Text style={styles.title}>Deliver to:</Text>
@@ -35,7 +40,10 @@ const OrderSummary = () => {
           <ItemValue label="City" value="Bandung" />
         </View>
         <View style={styles.btn}>
-          <Button text="Checkout Now" />
+          <Button
+            text="Checkout Now"
+            onPress={() => navigation.replace('SuccessOrder')}
+          />
         </View>
         <Gap height={40} />
       </View>
