@@ -44,7 +44,7 @@ const InProgress = () => {
       <ItemListFood
         image={DummyFoodTasteOne}
         title="Soup Bumil"
-        onPress={() => navigation.navigate('FoodDetail')}
+        onPress={() => navigation.navigate('OrderDetail')}
         rating={3}
         items={3}
         price="2.000.000"
@@ -53,7 +53,7 @@ const InProgress = () => {
       <ItemListFood
         image={DummyFoodTasteTwo}
         title="Soup Bumil"
-        onPress={() => navigation.navigate('FoodDetail')}
+        onPress={() => navigation.navigate('OrderDetail')}
         rating={3}
         items={3}
         price="2.000.000"
@@ -62,7 +62,7 @@ const InProgress = () => {
       <ItemListFood
         image={DummyFoodTasteThree}
         title="Soup Bumil"
-        onPress={() => navigation.navigate('FoodDetail')}
+        onPress={() => navigation.navigate('OrderDetail')}
         rating={3}
         items={3}
         price="2.000.000"
@@ -80,7 +80,7 @@ const PastOrders = () => {
         image={DummyFoodTasteOne}
         title="Soup Bumil"
         price="289.000"
-        onPress={() => navigation.navigate('FoodDetail')}
+        onPress={() => navigation.navigate('OrderDetail')}
         type="past-orders"
         items={3}
         rating={3}
@@ -91,7 +91,7 @@ const PastOrders = () => {
         image={DummyFoodTasteTwo}
         title="Soup Bumil"
         price="289.000"
-        onPress={() => navigation.navigate('FoodDetail')}
+        onPress={() => navigation.navigate('OrderDetail')}
         type="past-orders"
         items={3}
         rating={3}
@@ -102,7 +102,7 @@ const PastOrders = () => {
         image={DummyFoodTasteThree}
         title="Soup Bumil"
         price="289.000"
-        onPress={() => navigation.navigate('FoodDetail')}
+        onPress={() => navigation.navigate('OrderDetail')}
         type="past-orders"
         items={3}
         rating={3}
