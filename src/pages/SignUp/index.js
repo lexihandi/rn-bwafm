@@ -1,8 +1,24 @@
 import React from 'react';
 import {StyleSheet, View, Text, ScrollView} from 'react-native';
 import {Button, Gap, Header, TextInput} from '../../components';
+import {useSelector, useDispatch} from 'react-redux';
+import {useForm} from '../../utils';
 
 const SignUp = ({navigation}) => {
+  // const globalState = useSelector(state => state.globalReducer);
+  const [form, setForm] = useForm({
+    name: '',
+    email: '',
+    password: '',
+  });
+
+  const dispatch = useDispatch();
+
+  const onSubmit = () => {
+    console.log('form: ', form);
+    dispatch({type: 'SET_REGISTER', value: form});
+    navigation.navigate('SignUpAddress');
+  };
   return (
     <ScrollView style={styles.page}>
       <Header
@@ -19,19 +35,29 @@ const SignUp = ({navigation}) => {
             </View>
           </View>
         </View>
-        <TextInput label="Full Name" placeholder="Type your full name" />
+        <TextInput
+          label="Full Name"
+          placeholder="Type your full name"
+          value={form.name}
+          onChangeText={value => setForm('name', value)}
+        />
         <Gap height={16} />
         <TextInput
           label="Email Address"
           placeholder="Type your email address"
+          value={form.email}
+          onChangeText={value => setForm('email', value)}
         />
         <Gap height={16} />
-        <TextInput label="Password" placeholder="Type your password" />
-        <Gap height={24} />
-        <Button
-          text="Continue"
-          onPress={() => navigation.navigate('SignUpAddress')}
+        <TextInput
+          label="Password"
+          placeholder="Type your password"
+          secureTextEntry
+          value={form.password}
+          onChangeText={value => setForm('password', value)}
         />
+        <Gap height={24} />
+        <Button text="Continue" onPress={onSubmit} />
       </View>
     </ScrollView>
   );
