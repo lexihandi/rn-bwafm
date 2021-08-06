@@ -1,4 +1,4 @@
-import axios from 'axios';
+import Axios from 'axios';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Button, Gap, Header, TextInput} from '../../components';
@@ -14,8 +14,7 @@ const SignIn = ({navigation}) => {
 
   const onSubmit = () => {
     console.log('form:', form);
-    axios
-      .post('http://bwafm.test/api/login', form)
+    Axios.post('https://5295e082bf33.ngrok.io/api/login', form)
       .then(res => {
         console.log('success', res);
       })

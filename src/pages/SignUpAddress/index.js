@@ -3,6 +3,7 @@ import {ScrollView, StyleSheet, View} from 'react-native';
 import {Button, Gap, Header, Select, TextInput} from '../../components';
 import {useForm} from '../../utils';
 import {useDispatch, useSelector} from 'react-redux';
+import Axios from 'axios';
 
 const SignUpAddress = ({navigation}) => {
   const [form, setForm] = useForm({
@@ -22,7 +23,14 @@ const SignUpAddress = ({navigation}) => {
       ...registerReducer,
     };
     console.log('data register: ', data);
-    //navigation.replace('SuccessSignUp');
+    Axios.post('http://22d44c84d86b.ngrok.io/api/register')
+      .then(res => {
+        console.log('data success', res.data);
+        navigation.replace('SuccessSignUp');
+      })
+      .catch(err => {
+        console.log('error', err);
+      });
   };
   return (
     <ScrollView style={styles.page}>
